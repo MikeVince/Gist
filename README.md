@@ -65,20 +65,32 @@ There is a key bindings:
 * Windows and Linux: "ctrl+k", "ctrl+l"
 * OS X: "super+k", "super+l"
 
-**Get gist list:**
+**Open gist:**
 
 From menu items:
 
-* Main menu: Tools -> Gist -> "Get Gist List"
+* Main menu: Tools -> Gist -> "Open Gist..."
 
-By command called "Gist: Get Gist List".
+By command called "Gist: Open Gist".
 
 There is a key bindings:
 
 * Windows and Linux: "ctrl+shift+g"
-* OS X: "super+shift+g"
+* OS X: "ctrl+super+g"
 
-**The content of the selected gist will be copied into the clipboard**
+**Insert gist:**
+
+From menu items:
+
+* Main menu: Tools -> Gist -> "Insert Gist..."
+
+By command called "Gist: Insert Gist".
+
+There is a key bindings:
+
+* Windows and Linux: "ctrl+shift+alt+g"
+* OS X: "ctrl+shift+super+g"
+
 
 Information
 -----------
