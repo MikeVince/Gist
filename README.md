@@ -15,7 +15,7 @@ Go to your Packages subdirectory under Sublime Text 2 data directory:
 
 Then clone this repository:
 
-    git clone git://github.com/condemil/Gist
+    git clone git://github.com/dlazic88/Gist
 
 Options
 -------
