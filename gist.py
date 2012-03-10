@@ -190,6 +190,18 @@ def open_gist(gist_url):
         edit = view.begin_edit()
         view.insert(edit, 0, gist['files'][gist_filename]['content'])
         view.end_edit(edit)
+        
+def insert_gist(gist_url):
+    gist = api_request(gist_url)
+    files = sorted(gist['files'].keys())
+    for gist_filename in files:
+        view = sublime.active_window().active_view()
+        edit = view.begin_edit()
+        for region in view.sel():
+
+            view.replace(edit, region, gist['files'][gist_filename]['content'])
+
+        view.end_edit(edit)
 
 def get_gists():
     return api_request(GISTS_URL)
@@ -437,6 +449,14 @@ class GistListCommand(GistListCommandBase, sublime_plugin.WindowCommand):
     @catch_errors
     def handle_gist(self, gist):
         open_gist(gist['url'])
+
+    def get_window(self):
+        return self.window
+        
+class InsertGistListCommand(GistListCommandBase, sublime_plugin.WindowCommand):
+    @catch_errors
+    def handle_gist(self, gist):
+        insert_gist(gist['url'])
 
     def get_window(self):
         return self.window
